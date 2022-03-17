@@ -1,0 +1,24 @@
+.Rhistory
+*.xml
+run/chip/*
+run/train_frames/*
+run/val_frames/*
+store/
+logs/
+blocks/
+GE Gorakhpur/
+tiles/
+ignore/
+secrets.json
+.python*
+data
+
+.DS_Store
+__pycache__/
+Image Folder/
+Sentinel/
+.ipynb_checkpoints/
+/Bing Gorakhpur/*
+Metal Shapefile/
+*.npz
+servers.txt
