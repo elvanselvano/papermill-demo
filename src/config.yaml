@@ -4,5 +4,5 @@ notebook:
   output_path: ../out/paper-output.ipynb
 parameters:
   length: 10
-  width: 15
+  width: 8
   shape: rectangle
