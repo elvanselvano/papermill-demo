@@ -1,9 +1,25 @@
 import papermill as pm
-from config import *
+import os
+import yaml
 
-# pm.inspect_notebook('paper-demo.ipynb')
-# papermill --help-notebook ../notebooks/paper-input.ipynb
+CONFIG_PATH = './'
+
+def load_config(config_name):
+     with open(os.path.join(CONFIG_PATH, config_name)) as file:
+          config = yaml.safe_load(file)
+     return config
+
+def main():
+     config = load_config('config.yaml')
+     os.system("papermill --help-notebook ../template/paper-input.ipynb")
+     
+     result = pm.execute_notebook(config['dataset']['input_path'],
+                                  config['notebook']['output_path'],
+                                  kernel_name='python3',
+                                  parameters=config['parameters'])
+     
+     print(result)
 
 if __name__ == '__main__':
-     result = pm.execute_notebook(INPUT_PATH, OUTPUT_PATH, PARAMETERS)
+     main()
 
