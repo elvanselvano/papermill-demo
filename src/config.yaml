@@ -1,0 +1,8 @@
+dataset:
+  input_path: ../template/paper-input.ipynb
+notebook:
+  output_path: ../out/paper-output.ipynb
+parameters:
+  length: 10
+  width: 15
+  shape: rectangle
